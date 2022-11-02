@@ -31,3 +31,12 @@ body {
     height: 90vh;
     margin: auto;
 }
+
+.button {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.library-button {
+    font-size: 20px;
+}
