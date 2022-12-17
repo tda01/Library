@@ -14,10 +14,13 @@ Book.prototype.info = function() {
 }
 
 
-function createBook() {
+function createBook(book) {
     let bookdiv = document.createElement("div");
     bookdiv.classList.add("book");
+
+
     library.appendChild(bookdiv);
+
 }
 
 
@@ -28,16 +31,12 @@ function addBooktoLibrary() {
     let read = prompt("Did you read it?");
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
-    createBook();
+    createBook(book);
+
 }
 
-
-
-
-if (myLibrary.length > 3) {
-    library.style.gridTemplateColumns = "repeat(auto-fit, minmax(350px, 1fr))"
-}
-
-addBookBtn.onclick = function() {
+addBookBtn.addEventListener("click", function() {
     addBooktoLibrary();
-}
+
+});
+
