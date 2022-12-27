@@ -44,7 +44,10 @@ button {
 
 .logo-container button {
     font-size: 20px;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #817474;
+    border-radius: 10px;
+
 }
 
 
@@ -75,7 +78,19 @@ button {
     padding: 1rem;
 }
 
-.book h2, .book h3, .book p {
+.book p {
+    font-size: 1.1rem;
+}
+
+.book h2 {
+    font-weight: bold;
+}
+
+.book h3 {
+    font-style: italic;
+}
+
+.book h3, .book p {
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -117,18 +132,106 @@ button {
 }
 
 
-.book .notread {
+.book .false {
     background-color: #ee7878;
 }
 
-.book .notread:hover {
+.book .false:hover {
     background-color: #e86767;
 }
 
-.book .read {
-    background-color: lime;
+.book .true {
+    background-color: #84c96f;
 }
 
-.book .read:hover {
-    background-color: rgba(14, 220, 14, 0.91);
+.book .true:hover {
+    background-color: #6a9f59;
+}
+
+/*Form style*/
+
+.form-div {
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    position: fixed;
+    width: 350px;
+    height: 400px;
+    max-width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: #e3dede;
+    border-radius: 5%;
+    text-align: center;
+
+}
+
+.form-container.active {
+    transform: translate(-50%, -50%) scale(1.0);
+}
+
+
+.form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form h2 {
+    font-size: 2rem;
+}
+
+form input[type=text], form input[type=number] {
+    font-size: 1.5rem;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border: none;
+}
+
+form label[for=readit] {
+    font-size: 1.5rem;
+}
+
+form input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+
+form button[type=submit] {
+    font-size: 1.5rem;
+    width: 90%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: #84c96f;
+    border-radius: 2.5%;
+    border: none;
+
+}
+
+
+/*Overlay*/
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }

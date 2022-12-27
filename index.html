@@ -20,40 +20,47 @@
     <div class="main-content">
         <div class="button"><button class="library-button">+ Add book</button></div>
         <div class="library">
-            <div class="book">
-                <h2 class="title">Title</h2>
-                <h3 class="author">Author</h3>
-                <p class="pages">999 pages</p>
-                <button class="read">Read</button>
-                <button class="remove">Remove</button>
-            </div>
+<!--            <div class="book">-->
+<!--                <h2 class="title">The Hero of Ages</h2>-->
+<!--                <h3 class="author">Brandon Sanderson</h3>-->
+<!--                <p class="pages">800 pages</p>-->
+<!--                <button class="read true">Read</button>-->
+<!--                <button class="remove">Remove</button>-->
+<!--            </div>-->
 
-            <div class="book">
-                <h2 class="title">Title</h2>
-                <h3 class="author">Author</h3>
-                <p class="pages">999 pages</p>
-                <button class="notread">Not read</button>
-                <button class="remove">Remove</button>
-            </div>
+<!--            <div class="book">-->
+<!--                <h2 class="title">The Hero of Ages</h2>-->
+<!--                <h3 class="author">Brandon Sanderson</h3>-->
+<!--                <p class="pages">800 pages</p>-->
+<!--                <button class="read false">Not read</button>-->
+<!--                <button class="remove">Remove</button>-->
+<!--            </div>-->
+        </div>
 
-            <div class="book">
-                <h2 class="title">Title</h2>
-                <h3 class="author">Author</h3>
-                <p class="pages">999 pages</p>
-                <button class="notread">Not read</button>
-                <button class="remove">Remove</button>
-            </div>
+        <div class="form-container" id="form-container">
+            <form action="">
+                <h2>Add new book</h2>
 
-            <div class="book">
-                <h2 class="title">Title</h2>
-                <h3 class="author">Author</h3>
-                <p class="pages">999 pages</p>
-                <button class="read">Read</button>
-                <button class="remove">Remove</button>
-            </div>
-
+                <div class="form-div">
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+                </div>
+                <div class="form-div">
+                    <input type="text" id="author" name="author" placeholder="Author" required>
+                </div>
+                <div class="form-div">
+                    <input type="number" id="pages" name="pages" placeholder="Pages" required>
+                </div>
+                <div class="form-div">
+                    <label for="readit">Have you read it?</label>
+                    <input type="checkbox" id="readit" name="readit">
+                </div>
+                <div class="form-div">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+    <div class="" id="overlay"></div>
 
 <script src="script.js"></script>
 </body>
