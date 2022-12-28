@@ -46,7 +46,7 @@ button {
     font-size: 20px;
     padding: 0.25rem 0.75rem;
     border: 1px solid #817474;
-    border-radius: 10px;
+
 
 }
 
@@ -216,6 +216,11 @@ form button[type=submit] {
     border: none;
 
 }
+
+form button[type=submit]:hover {
+    background-color: #6a9f59;
+}
+
 
 
 /*Overlay*/
